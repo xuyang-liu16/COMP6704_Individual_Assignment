@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-07",
+  "python": "3.14.5",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "threadpools_during_run": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "libomp.dylib",
+      "version": null
+    }
+  ],
+  "requested_thread_environment": {
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "thread_limit_note": "Thread limits are requested before NumPy import and for supported pools via threadpoolctl. Apple Accelerate's effective thread count is not independently exposed by threadpoolctl on this machine.",
+  "max_iter": 2000,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "relative_gradient_mapping_tolerance": 0.0001,
+  "stationarity_measure": "G_W=min(W,grad_W F), G_H=min(H,grad_H F); unit-step projected gradient mapping for normalized F. relative_pg=norm(G_k)/norm(G_0), after gauge normalization.",
+  "check_every": 10,
+  "timing": "One thread requested; wall time includes updates, gauge normalization and identical diagnostics every 10 sweeps; excludes loading, SVD bounds, file IO and plotting. Runs are sequential.",
+  "datasets": {
+    "synthetic_clean": {
+      "shape": [
+        80,
+        500
+      ],
+      "rank": 8,
+      "svd_lower_bound": 1.7032676585013348e-32,
+      "sha256_float64_c_order": "4e366af8540d268922ac3d07b9a0cbf893c94b219112b8d8cbdc72b18c8ac3a9"
+    },
+    "synthetic_noisy": {
+      "shape": [
+        80,
+        500
+      ],
+      "rank": 8,
+      "svd_lower_bound": 0.0007447914409391361,
+      "sha256_float64_c_order": "9d4cff2e68f3049c1cc09ef800fdfd0ec9b6c001ce312e61854908bac2413017"
+    },
+    "digits_r16": {
+      "shape": [
+        64,
+        1797
+      ],
+      "rank": 16,
+      "svd_lower_bound": 0.02376427625759622,
+      "sha256_float64_c_order": "c473f107be50dbf3250d6c797debf7dfbbbd51593882901ff43b01b664cdd96c"
+    },
+    "digits_r8": {
+      "shape": [
+        64,
+        1797
+      ],
+      "rank": 8,
+      "svd_lower_bound": 0.052702516415102756,
+      "sha256_float64_c_order": "c473f107be50dbf3250d6c797debf7dfbbbd51593882901ff43b01b664cdd96c"
+    },
+    "digits_r32": {
+      "shape": [
+        64,
+        1797
+      ],
+      "rank": 32,
+      "svd_lower_bound": 0.005263761177596699,
+      "sha256_float64_c_order": "c473f107be50dbf3250d6c797debf7dfbbbd51593882901ff43b01b664cdd96c"
+    }
+  },
+  "zero_lock": {
+    "locked_row": 20,
+    "mu_objective_lower_bound_from_locked_row": 0.02246697650247281,
+    "runs": [
+      {
+        "method": "MU",
+        "objective": 0.02247098884583919,
+        "relative_pg": 1.3987553270492068,
+        "iterations": 2000,
+        "locked_row_norm_at_end": 0.0
+      },
+      {
+        "method": "PG",
+        "objective": 8.071827248027831e-08,
+        "relative_pg": 9.839889500413179e-05,
+        "iterations": 1080,
+        "locked_row_norm_at_end": 0.4970585976054401
+      },
+      {
+        "method": "HALS",
+        "objective": 1.4041422572217283e-08,
+        "relative_pg": 7.490188059975995e-05,
+        "iterations": 150,
+        "locked_row_norm_at_end": 0.4973074970687632
+      }
+    ]
+  },
+  "library_reference": [
+    {
+      "seed": 0,
+      "objective": 0.03289107747054372,
+      "iterations": 1816,
+      "relative_pg": 3.697905781843341e-06,
+      "convergence_warning": false
+    },
+    {
+      "seed": 1,
+      "objective": 0.03316426442363626,
+      "iterations": 1391,
+      "relative_pg": 4.512866838511338e-06,
+      "convergence_warning": false
+    },
+    {
+      "seed": 2,
+      "objective": 0.033107681317394826,
+      "iterations": 1154,
+      "relative_pg": 3.5625754360007588e-06,
+      "convergence_warning": false
+    },
+    {
+      "seed": 3,
+      "objective": 0.033469046797235634,
+      "iterations": 641,
+      "relative_pg": 4.881435963356104e-06,
+      "convergence_warning": false
+    },
+    {
+      "seed": 4,
+      "objective": 0.03310598799204092,
+      "iterations": 795,
+      "relative_pg": 4.59483607931405e-06,
+      "convergence_warning": false
+    }
+  ],
+  "main_run_count": 75
+}

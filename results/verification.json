@@ -1,0 +1,28 @@
+{
+  "finite_difference_max_absolute_error": 4.8340715111394594e-11,
+  "gradient_mapping_vs_projection_error": 0.0,
+  "gauge_product_error": 4.2276033262255756e-16,
+  "maximum_one_sweep_objective_increase": {
+    "MU": -0.0003537593929712757,
+    "PG": -0.0003832186931192194,
+    "HALS": -2.774250817938473e-05
+  },
+  "fixed_W_HALS_vs_scipy_nnls_factor_error": 2.742875949677497e-15,
+  "rank_one_objectives": {
+    "MU": 1.7483555165698533e-32,
+    "PG": 2.0016146507322013e-32,
+    "HALS": 2.0016146507322013e-32
+  },
+  "zero_lock_final_row_norms": {
+    "MU": 0.0,
+    "PG": 0.6021207071915404,
+    "HALS": 0.602618857863018
+  },
+  "unsafe_divide_before_multiply_nonfinite": true,
+  "guarded_zero_block_finite": {
+    "MU": true,
+    "PG": true,
+    "HALS": true
+  },
+  "passed": true
+}

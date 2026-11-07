@@ -1,0 +1,16 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+[Aa][Gg][Ee][Nn][Tt].[Mm][Dd]
+[Aa][Gg][Ee][Nn][Tt][Ss].[Mm][Dd]
+review/
+review_*.tex
+references/
+output/
+main.tex
+neurips_2025.sty
+*.aux
+*.log
+*.out
+*.synctex.gz
